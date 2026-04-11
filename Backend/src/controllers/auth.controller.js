@@ -7,7 +7,23 @@ async function sendTokenResponse(user, res) {
 
     const token = jwt.sign({
         id: user._id,
-    }, config.JWT_SECRET)
+    }, config.JWT_SECRET , {
+        expiresIn:"7d"
+    })
+
+    res.cookie("token", token)
+
+    res.status(200).json({
+        message,
+        success: true,
+        user: {
+            id: user._id,
+            email: user.email,
+            contact: user.contact,
+            fullname: user.fullname,
+            role: user.role
+        }
+    })
 
 }
 
@@ -33,6 +49,8 @@ export const register = async (req, res) => {
             password,
             fullname
         })
+
+        await sendTokenResponse(user, res,"User registered successfully"); //token generate kr k cookies mai save krega ye function
 
 
 
