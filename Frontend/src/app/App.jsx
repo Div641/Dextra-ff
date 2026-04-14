@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { routes } from './app.route'
-import { RouterProvider } from 'react-router-dom'
+import { RouterProvider } from 'react-router'
 
 function App() {
  
