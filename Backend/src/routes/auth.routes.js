@@ -14,7 +14,11 @@ router.post('/login', validateLoginUser, login);
 
 // /api/auth/google
 router.get("/google",
-    passport.authenticate("google", { scope: [ "profile", "email" ] }))
+    passport.authenticate("google", { 
+        scope: [ "profile", "email" ],
+        prompt: "select_account"
+     })
+    )
 
 router.get("/google/callback",
     passport.authenticate("google", { session: false }),

@@ -57,9 +57,10 @@ const Watermarks = () => (
 const RaagaLogo = () => (
     <div className="flex flex-col items-center mb-8 md:mb-12 relative w-max mx-auto">
         <style>{`
-            @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Playfair+Display:wght@600&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Playfair+Display:wght@600&family=Nunito:wght@400;600&display=swap');
             .font-caveat { font-family: 'Caveat', cursive; }
             .font-playfair { font-family: 'Playfair Display', serif; }
+            .font-nunito { font-family: 'Nunito', sans-serif; }
         `}</style>
         
         {/* Grid lines behind logo */}
@@ -220,8 +221,8 @@ const Login = () => {
                         <span className="bg-black text-white px-3 py-2 text-[10px] leading-none tracking-[0.15em] font-bold uppercase border border-white/20">ACCESS // GRANTED</span>
                     </div>
                     <div className="space-y-4">
-                        <div className="text-white text-5xl lg:text-6xl font-playfair tracking-wide mix-blend-difference">
-                            <span className="italic">रaaगा</span> Luxe
+                        <div className="text-white text-5xl lg:text-6xl font-nunito tracking-wide mix-blend-difference">
+                            <span className="italic font-medium">रaaगा</span>
                         </div>
                         <div className="h-[2px] bg-white w-16"></div>
                     </div>
