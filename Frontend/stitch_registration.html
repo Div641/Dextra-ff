@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JOIN THE MOVEMENT | HOODIE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#dfe0e0",
+                        "on-primary-fixed-variant": "#474747",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#8f0041",
+                        "on-background": "#1a1c1c",
+                        "secondary-fixed": "#e2e2e2",
+                        "tertiary-fixed": "#ffd9e0",
+                        "surface-container": "#eeeeee",
+                        "primary-container": "#1b1b1b",
+                        "on-tertiary-fixed": "#3f0019",
+                        "on-primary-fixed": "#1b1b1b",
+                        "background": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#3f0019",
+                        "outline": "#7e7576",
+                        "on-secondary-container": "#616363",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary": "#000000",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-surface": "#1a1c1c",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary-fixed-dim": "#ffb1c3",
+                        "on-surface-variant": "#4c4546",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#000000",
+                        "surface-dim": "#dadada",
+                        "primary-fixed": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#c6c6c6",
+                        "surface": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-container": "#ff0c7b",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "secondary": "#5d5f5f",
+                        "inverse-surface": "#2f3131",
+                        "on-primary-container": "#848484",
+                        "outline-variant": "#cfc4c5",
+                        "surface-tint": "#5e5e5e",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "surface-container-low": "#f3f3f3",
+                        "on-secondary-fixed": "#1a1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0rem",
+                        "lg": "0rem",
+                        "xl": "0rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "margin": "40px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-xl": ["120px", {"lineHeight": "100%", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "120%", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}],
+                        "headline-lg": ["64px", {"lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        input:focus {
+            outline: none !important;
+            box-shadow: none !important;
+            border-bottom-color: black !important;
+        }
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="bg-white dark:bg-black text-black dark:text-white font-['Space_Grotesk'] uppercase tracking-tighter font-bold docked full-width top-0 sticky border-b-2 border-black dark:border-white z-50">
+<nav class="flex justify-between items-center w-full px-6 py-4 md:px-12 max-w-[1440px] mx-auto">
+<div class="text-2xl font-black italic tracking-tighter text-black dark:text-white">
+                STREET_LUXE
+            </div>
+<div class="hidden md:flex gap-8">
+<a class="text-black/60 dark:text-white/60 hover:line-through hover:text-black dark:hover:text-white transition-all duration-75" href="#">SHOP</a>
+<a class="text-black/60 dark:text-white/60 hover:line-through hover:text-black dark:hover:text-white transition-all duration-75" href="#">DROPS</a>
+<a class="text-black/60 dark:text-white/60 hover:line-through hover:text-black dark:hover:text-white transition-all duration-75" href="#">ARCHIVE</a>
+<a class="text-black/60 dark:text-white/60 hover:line-through hover:text-black dark:hover:text-white transition-all duration-75" href="#">EDITORIAL</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-black dark:text-white" data-icon="shopping_bag">shopping_bag</button>
+<button class="material-symbols-outlined text-black dark:text-white" data-icon="menu">menu</button>
+</div>
+</nav>
+</header>
+<!-- Main Registration Section -->
+<main class="min-h-screen flex flex-col md:flex-row">
+<!-- Left Side: Massive Editorial Typography & Form -->
+<section class="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-24 py-20 bg-surface-container-lowest relative z-10">
+<div class="max-w-[540px] w-full mx-auto md:mx-0">
+<p class="font-label-caps text-label-caps text-primary mb-8">AUTHENTICITY IS CURRENCY</p>
+<h1 class="font-headline-xl text-headline-xl mb-12 uppercase break-words leading-none">
+                    JOIN THE <br/> MOVEMENT
+                </h1>
+<form class="space-y-12">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-primary/40 absolute -top-6 left-0">USERNAME</label>
+<input class="w-full bg-transparent border-0 border-b border-black py-4 font-body-lg text-body-lg placeholder:text-black/20 focus:ring-0 rounded-none" placeholder="ENTER UNIQUE ALIAS" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-primary/40 absolute -top-6 left-0">EMAIL ADDRESS</label>
+<input class="w-full bg-transparent border-0 border-b border-black py-4 font-body-lg text-body-lg placeholder:text-black/20 focus:ring-0 rounded-none" placeholder="EMAIL@STREET.COM" type="email"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-primary/40 absolute -top-6 left-0">PASSWORD</label>
+<input class="w-full bg-transparent border-0 border-b border-black py-4 font-body-lg text-body-lg placeholder:text-black/20 focus:ring-0 rounded-none" placeholder="••••••••" type="password"/>
+</div>
+<div class="pt-8 space-y-6">
+<button class="w-full bg-primary text-on-primary py-6 font-label-caps text-label-caps hover:bg-on-primary-container transition-colors duration-200 active:translate-y-[1px]">
+                            CREATE ACCOUNT
+                        </button>
+<p class="text-center font-body-md text-secondary">
+                            ALREADY ENROLLED? <a class="font-bold text-primary underline underline-offset-4" href="#">SIGN IN</a>
+</p>
+</div>
+</form>
+<div class="mt-24 pt-12 border-t border-black/10">
+<p class="font-body-md text-black/60 italic max-w-sm">
+                        "Luxury is not about the price tag, it's about the perspective. Join our inner circle for early access to drops."
+                    </p>
+</div>
+</div>
+</section>
+<!-- Right Side: Editorial Lifestyle Image -->
+<section class="hidden md:block md:w-1/2 relative bg-black">
+<img alt="Streetwear model" class="absolute inset-0 w-full h-full object-cover grayscale contrast-125 opacity-90" data-alt="Editorial fashion photography of two models wearing oversized black streetwear hoodies and metallic accessories in a brutalist concrete setting with harsh lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt_EesQHhLejHHUzeA63pfnOhC3Z9ZRQJ2dzWv2nui2MnH6rtJCjuPd4kSfGiIE4k_06iHUVw7ZX9cI2d7i73CJKbQyhcAHDlzo9yGytMmuQAfE2GFf_IiTmyASybYcQg9tHh8lDybQffuGx1nW1v0AX2iH__9z1XMqVDcgrVvZ8q_VNG3y79W8x_tTukksDPErr3bvR1098n_6DayV4QyHq1Mj7TuVolf-9Pa9XqD5EG6qMLYoUsN0N1unCL_djVEFrccYlmMtd4e"/>
+<div class="absolute inset-0 flex flex-col justify-between p-12 pointer-events-none">
+<div class="flex justify-end">
+<span class="bg-black text-white px-4 py-2 font-label-caps text-label-caps border border-white/20">DROP 04 // SEASON 24</span>
+</div>
+<div class="space-y-4">
+<div class="text-white font-headline-lg text-headline-lg uppercase italic tracking-tighter mix-blend-difference">
+                        STREET LUXE
+                    </div>
+<div class="h-[2px] bg-white w-24"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Marquee Announcement -->
+<div class="marquee-container bg-black py-4 border-y-2 border-white/10 overflow-hidden">
+<div class="marquee-content flex gap-12 text-white font-label-caps text-label-caps">
+<span>LIMITED QUANTITIES AVAILABLE // </span>
+<span>NEXT DROP IN 48 HOURS // </span>
+<span>WORLDWIDE SHIPPING INCLUDED // </span>
+<span>JOIN THE DISCORD FOR EARLY ACCESS // </span>
+<span>LIMITED QUANTITIES AVAILABLE // </span>
+<span>NEXT DROP IN 48 HOURS // </span>
+<span>WORLDWIDE SHIPPING INCLUDED // </span>
+<span>JOIN THE DISCORD FOR EARLY ACCESS // </span>
+<span>LIMITED QUANTITIES AVAILABLE // </span>
+<span>NEXT DROP IN 48 HOURS // </span>
+<span>WORLDWIDE SHIPPING INCLUDED // </span>
+<span>JOIN THE DISCORD FOR EARLY ACCESS // </span>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-white dark:bg-black text-black dark:text-white font-['Space_Grotesk'] text-[10px] tracking-widest uppercase w-full border-t-2 border-black dark:border-white">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-6 py-12 md:px-12 mt-auto max-w-[1440px] mx-auto">
+<div class="mb-8 md:mb-0 font-bold">
+                ©2024 STREET_LUXE ALL RIGHTS RESERVED
+            </div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-12">
+<a class="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white underline" href="#">PRIVACY</a>
+<a class="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white underline" href="#">TERMS</a>
+<a class="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white underline" href="#">ACCESSIBILITY</a>
+<a class="text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white underline" href="#">CONTACT</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -2,12 +2,123 @@ import React, { useState } from 'react';
 import { useAuth } from "../hook/useAuth"
 import { Link, useNavigate } from 'react-router';
 
+const Watermarks = () => (
+    <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-[0.04] text-black">
+        {/* Top Left Artistic Lotus */}
+        <svg className="absolute -top-32 -left-32 w-[600px] h-[600px] -rotate-12" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.2">
+            <path d="M50 95 C 45 70 45 35 50 15 C 55 35 55 70 50 95 Z" fill="currentColor" fillOpacity="0.4"/>
+            <path d="M50 95 C 35 80 20 50 10 35 C 30 45 40 65 50 95 Z" fill="currentColor" fillOpacity="0.3"/>
+            <path d="M50 95 C 65 80 80 50 90 35 C 70 45 60 65 50 95 Z" fill="currentColor" fillOpacity="0.3"/>
+            <path d="M50 95 C 25 90 10 75 0 60 C 20 75 35 85 50 95 Z" fill="currentColor" fillOpacity="0.2"/>
+            <path d="M50 95 C 75 90 90 75 100 60 C 80 75 65 85 50 95 Z" fill="currentColor" fillOpacity="0.2"/>
+            <circle cx="50" cy="10" r="2" fill="currentColor" />
+            <circle cx="10" cy="30" r="1.5" fill="currentColor" />
+            <circle cx="90" cy="30" r="1.5" fill="currentColor" />
+        </svg>
+
+        {/* Top Right Mandala Half */}
+        <svg className="absolute -top-20 -right-20 w-[450px] h-[450px]" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.3">
+            <circle cx="100" cy="0" r="20" strokeDasharray="1 2" />
+            <circle cx="100" cy="0" r="40" />
+            <circle cx="100" cy="0" r="45" strokeDasharray="0.5 1" />
+            <circle cx="100" cy="0" r="60" />
+            <path d="M40 0 Q 30 15 40 30 Q 55 20 60 0 Z" fill="currentColor" fillOpacity="0.1"/>
+            <path d="M60 0 Q 70 30 80 40 Q 90 25 100 20 Z" fill="currentColor" fillOpacity="0.1"/>
+            <path d="M100 40 Q 85 50 70 60 Q 80 75 100 80 Z" fill="currentColor" fillOpacity="0.1"/>
+            <circle cx="100" cy="0" r="80" strokeDasharray="2 3" />
+        </svg>
+
+        {/* Bottom Right Paisley (Ambi) */}
+        <svg className="absolute -bottom-10 -right-10 w-[350px] h-[450px]" viewBox="0 0 100 150" fill="none" stroke="currentColor" strokeWidth="0.4">
+            <path d="M50 140 C 20 140 5 110 5 80 C 5 50 30 20 50 20 C 70 20 90 40 90 60 C 90 80 70 90 60 80 C 50 70 60 50 70 50 C 80 50 85 60 85 70 C 85 100 65 120 50 140 Z" fill="currentColor" fillOpacity="0.1"/>
+            <path d="M50 125 C 30 125 15 100 15 80 C 15 55 35 35 50 35 C 65 35 75 50 75 60" />
+            <circle cx="50" cy="80" r="10" strokeDasharray="1 1" />
+            <circle cx="50" cy="80" r="4" fill="currentColor" />
+            <path d="M50 140 Q 40 150 50 160" />
+            <path d="M40 135 Q 30 145 40 155" />
+            <path d="M60 135 Q 70 145 60 155" />
+        </svg>
+
+        {/* Middle Left Henna Elements */}
+        <svg className="absolute top-1/2 -left-24 w-[300px] h-[300px] -translate-y-1/2 opacity-70" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.3">
+            <path d="M10 50 Q 30 30 50 50 T 90 50" />
+            <path d="M10 50 Q 30 70 50 50 T 90 50" fill="currentColor" fillOpacity="0.1" />
+            <circle cx="50" cy="50" r="5" fill="currentColor" />
+            <circle cx="30" cy="50" r="2" fill="currentColor" />
+            <circle cx="70" cy="50" r="2" fill="currentColor" />
+            <path d="M50 45 Q 50 25 60 20" />
+            <path d="M50 55 Q 50 75 60 80" />
+            <circle cx="60" cy="20" r="1" />
+            <circle cx="60" cy="80" r="1" />
+        </svg>
+    </div>
+);
+
+const RaagaLogo = () => (
+    <div className="flex flex-col items-center mb-8 md:mb-12 relative w-max mx-auto">
+        <style>{`
+            @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Playfair+Display:wght@600&display=swap');
+            .font-caveat { font-family: 'Caveat', cursive; }
+            .font-playfair { font-family: 'Playfair Display', serif; }
+        `}</style>
+        
+        {/* Grid lines behind logo */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-12 flex flex-col justify-between opacity-15 pointer-events-none">
+            <div className="border-t border-black w-full"></div>
+            <div className="border-t border-black w-full"></div>
+            <div className="border-t border-black w-full"></div>
+        </div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[150%] flex justify-between opacity-15 pointer-events-none">
+            <div className="border-l border-black h-full"></div>
+            <div className="border-l border-black h-full"></div>
+            <div className="border-l border-black h-full"></div>
+        </div>
+
+        <div className="relative z-10 flex items-center text-6xl md:text-[80px] font-playfair text-[#111]">
+            <span className="leading-none tracking-tight">र</span>
+            <span className="relative leading-none mx-1 md:mx-2 flex flex-col items-center">
+                <span className="absolute -top-[1.4rem] md:-top-[2rem] text-[#b91c1c] z-20">
+                    <svg width="48" height="36" viewBox="0 0 24 24" fill="currentColor" className="w-10 h-8 md:w-16 md:h-12 drop-shadow-sm">
+                        <path d="M12 2C12 2 9 8 5 9C8 10 10 15 12 20C14 15 16 10 19 9C15 8 12 2 12 2Z"/>
+                        <path d="M12 20C12 20 8 18 2 12C6 15 9 17 12 20Z"/>
+                        <path d="M12 20C12 20 16 18 22 12C18 15 15 17 12 20Z"/>
+                    </svg>
+                </span>
+                <span className="border-t-[3px] md:border-t-[4px] border-[#111] pt-1">aa</span>
+            </span>
+            <span className="leading-none tracking-tight">गा</span>
+        </div>
+
+        {/* Decorative handwritten text */}
+        <div className="absolute -left-20 -top-16 hidden lg:flex flex-col items-end opacity-80">
+            <div className="text-right mb-2">
+                <p className="font-caveat text-xl text-gray-800 whitespace-nowrap">The marigold</p>
+                <p className="font-caveat text-xl text-gray-800 whitespace-nowrap">humble yet divine,</p>
+            </div>
+            <svg width="40" height="40" viewBox="0 0 100 100" className="opacity-40" strokeDasharray="4 4">
+                <path d="M90 90 Q 50 90 50 50 T 10 10" fill="none" stroke="black" strokeWidth="2"/>
+                <polygon points="10,10 20,5 5,20" fill="black"/>
+            </svg>
+        </div>
+
+        <div className="absolute -right-20 -bottom-24 hidden lg:flex flex-col items-start opacity-80">
+            <svg width="40" height="40" viewBox="0 0 100 100" className="opacity-40 mb-2" strokeDasharray="4 4">
+                <path d="M10 10 Q 50 10 50 50 T 90 90" fill="none" stroke="black" strokeWidth="2"/>
+                <polygon points="90,90 80,95 95,80" fill="black"/>
+            </svg>
+            <div className="text-left">
+                <p className="font-caveat text-xl text-gray-800 whitespace-nowrap">From our heart</p>
+                <p className="font-caveat text-xl text-gray-800 whitespace-nowrap">to yours</p>
+            </div>
+        </div>
+    </div>
+);
 const Register = () => {
 
     const { handleRegister } = useAuth()
     const navigate = useNavigate()
 
-    const [ formData, setFormData ] = useState({
+    const [formData, setFormData] = useState({
         fullName: '',
         contactNumber: '',
         email: '',
@@ -19,7 +130,7 @@ const Register = () => {
         const { name, value, type, checked } = e.target;
         setFormData(prev => ({
             ...prev,
-            [ name ]: type === 'checkbox' ? checked : value
+            [name]: type === 'checkbox' ? checked : value
         }));
     };
 
@@ -36,102 +147,73 @@ const Register = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#0e0e0e] text-[#e5e2e1] font-sans selection:bg-[#FFD700] selection:text-[#131313] flex flex-col lg:flex-row">
+        <main className="h-screen flex flex-col md:flex-row-reverse bg-white text-black font-sans selection:bg-black selection:text-white overflow-hidden">
+            {/* Form Section (Now on the Right) */}
+            <section className="w-full md:w-[60%] lg:w-[55%] flex flex-col justify-center px-6 lg:px-16 xl:px-24 py-4 bg-[#f8f8f8] relative z-10 h-full overflow-y-auto">
+                <Watermarks />
+                
+                <div className="max-w-[420px] w-full mx-auto md:mx-0 my-auto py-8 relative z-10">
+                    <RaagaLogo />
 
-            {/* Split Screen - Left Image Section (Hidden on mobile, visible on lg screens) */}
-            <div className="hidden lg:flex lg:w-1/2 relative bg-[#131313] items-center justify-center overflow-hidden border-r border-[#1c1b1b]">
-                <img
-                    src="../../../../public/editorial.png"
-                    alt="DexFashion Editorial"
-                    className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity hover:scale-105 transition-transform duration-[20s] ease-out"
-                />
-
-                {/* Gradient overlays to merge image nicely into the dark background */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-transparent to-transparent opacity-90"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0e0e0e]/50 via-transparent to-[#0e0e0e] opacity-90"></div>
-
-                <div className="relative z-10 p-16 flex flex-col h-full justify-between w-full max-w-2xl">
-                    <h2 className="text-[#FFD700] text-xl font-bold tracking-widest uppercase">DexFashion.</h2>
-
-                    <div className="mt-auto">
-                        <p className="text-5xl lg:text-6xl font-bold tracking-tighter leading-[1.1] text-white mb-6">
-                            Define your <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e9c400] to-[#ffd700]">aesthetic.</span>
-                        </p>
-                        <p className="text-[#d0c6ab] max-w-md text-lg leading-relaxed">
-                            Join the exclusive movement of creators and brands redefining the modern fashion landscape.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            {/* Split Screen - Right Form Section */}
-            <div className="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-10 lg:p-12 h-screen overflow-hidden bg-[#0e0e0e]">
-                <div className="w-full max-w-md max-h-[80vh] overflow-y-auto bg-[#131313] lg:bg-transparent p-8 md:p-10 lg:p-6 rounded-2xl lg:rounded-none shadow-[0_24px_48px_-12px_rgba(0,0,0,0.5)] lg:shadow-none">
-                    <div className="mb-8">
-                        <h2 className="text-sm uppercase tracking-widest text-[#FFD700] font-medium mb-3">Welcome to Dextra</h2>
-                        <h1 className="text-4xl md:text-5xl font-bold tracking-tighter text-white">Elevate Your Style</h1>
-                    </div>
-
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                    <form onSubmit={handleSubmit} className="space-y-5">
                         {/* Full Name */}
-                        <div className="flex flex-col">
-                            <label className="text-sm text-[#d0c6ab] mb-2 font-medium">Full Name</label>
+                        <div className="relative pt-3">
+                            <label className="text-[10px] leading-none tracking-[0.1em] font-bold text-black/40 absolute top-0 left-0 uppercase">FULL NAME</label>
                             <input
                                 type="text"
                                 name="fullName"
                                 value={formData.fullName}
                                 onChange={handleChange}
                                 required
-                                className="bg-[#1c1b1b] lg:bg-[#0e0e0e] text-white border-b-2 border-[#4d4732] focus:border-[#FFD700] outline-none px-4 py-3 transition-colors duration-300 focus:bg-[#201f1f] lg:focus:bg-[#131313]"
-                                placeholder="e.g. John Doe"
+                                className="w-[90%] bg-transparent border-0 border-b border-black py-2 text-base placeholder:text-black/20 focus:ring-0 focus:outline-none focus:border-black rounded-none"
+                                placeholder="ENTER FULL NAME"
                             />
                         </div>
 
                         {/* Contact Number */}
-                        <div className="flex flex-col">
-                            <label className="text-sm text-[#d0c6ab] mb-2 font-medium">Contact Number</label>
+                        <div className="relative pt-3">
+                            <label className="text-[10px] leading-none tracking-[0.1em] font-bold text-black/40 absolute top-0 left-0 uppercase">CONTACT NUMBER</label>
                             <input
                                 type="tel"
                                 name="contactNumber"
                                 value={formData.contactNumber}
                                 onChange={handleChange}
                                 required
-                                className="bg-[#1c1b1b] lg:bg-[#0e0e0e] text-white border-b-2 border-[#4d4732] focus:border-[#FFD700] outline-none px-4 py-3 transition-colors duration-300 focus:bg-[#201f1f] lg:focus:bg-[#131313]"
+                                className="w-[90%] bg-transparent border-0 border-b border-black py-2 text-base placeholder:text-black/20 focus:ring-0 focus:outline-none focus:border-black rounded-none"
                                 placeholder="+1 (555) 000-0000"
                             />
                         </div>
 
                         {/* Email */}
-                        <div className="flex flex-col">
-                            <label className="text-sm text-[#d0c6ab] mb-2 font-medium">Email Address</label>
+                        <div className="relative pt-3">
+                            <label className="text-[10px] leading-none tracking-[0.1em] font-bold text-black/40 absolute top-0 left-0 uppercase">EMAIL ADDRESS</label>
                             <input
                                 type="email"
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                className="bg-[#1c1b1b] lg:bg-[#0e0e0e] text-white border-b-2 border-[#4d4732] focus:border-[#FFD700] outline-none px-4 py-3 transition-colors duration-300 focus:bg-[#201f1f] lg:focus:bg-[#131313]"
-                                placeholder="hello@example.com"
+                                className="w-[90%] bg-transparent border-0 border-b border-black py-2 text-base placeholder:text-black/20 focus:ring-0 focus:outline-none focus:border-black rounded-none"
+                                placeholder="EMAIL@STREET.COM"
                             />
                         </div>
 
                         {/* Password */}
-                        <div className="flex flex-col">
-                            <label className="text-sm text-[#d0c6ab] mb-2 font-medium">Password</label>
+                        <div className="relative pt-3">
+                            <label className="text-[10px] leading-none tracking-[0.1em] font-bold text-black/40 absolute top-0 left-0 uppercase">PASSWORD</label>
                             <input
                                 type="password"
                                 name="password"
                                 value={formData.password}
                                 onChange={handleChange}
                                 required
-                                className="bg-[#1c1b1b] lg:bg-[#0e0e0e] text-white border-b-2 border-[#4d4732] focus:border-[#FFD700] outline-none px-4 py-3 transition-colors duration-300 focus:bg-[#201f1f] lg:focus:bg-[#131313]"
+                                className="w-[90%] bg-transparent border-0 border-b border-black py-2 text-base placeholder:text-black/20 focus:ring-0 focus:outline-none focus:border-black rounded-none"
                                 placeholder="••••••••"
                             />
                         </div>
 
                         {/* Is Seller Checkbox */}
-                        <div className="flex items-center gap-4 mt-2 group w-max cursor-pointer">
+                        <div className="flex items-center gap-3 mt-1 group w-max cursor-pointer">
                             <div className="relative flex items-center">
                                 <input
                                     type="checkbox"
@@ -139,36 +221,61 @@ const Register = () => {
                                     id="isSeller"
                                     checked={formData.isSeller}
                                     onChange={handleChange}
-                                    className="peer appearance-none w-6 h-6 border border-[#4d4732] rounded bg-[#1c1b1b] lg:bg-[#0e0e0e] checked:bg-[#FFD700] checked:border-[#FFD700] cursor-pointer transition-colors duration-300 group-hover:border-[#FFD700]"
+                                    className="peer appearance-none w-4 h-4 border-2 border-black rounded-none bg-transparent checked:bg-black checked:border-black cursor-pointer transition-colors duration-300"
                                 />
-                                <svg className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none opacity-0 peer-checked:opacity-100 text-[#221b00]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                                <svg className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 pointer-events-none opacity-0 peer-checked:opacity-100 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                             </div>
-                            <label htmlFor="isSeller" className="text-sm text-[#e5e2e1] group-hover:text-[#FFD700] cursor-pointer select-none transition-colors duration-300">Register as Seller</label>
+                            <label htmlFor="isSeller" className="text-xs text-black font-medium cursor-pointer select-none uppercase tracking-widest">Register as Seller</label>
                         </div>
 
-                        <a href="/api/auth/google" className="mt-4 block text-center text-[#999077] hover:text-[#FFD700] transition-colors duration-300">
-                            Continue with Google
-                        </a>
+                        <div className="pt-2 space-y-3 w-[90%]">
+                            <button
+                                type="submit"
+                                className="w-full bg-black text-white py-4 text-[12px] leading-none tracking-[0.15em] font-bold uppercase hover:bg-black/80 transition-colors duration-200 active:translate-y-[1px]"
+                            >
+                                CREATE ACCOUNT
+                            </button>
 
-                        {/* Submit Button */}
-                        <button
-                            type="submit"
-                            className="mt-6 w-full bg-gradient-to-r from-[#e9c400] to-[#ffd700] text-[#131313] font-bold tracking-wide py-4 px-8 rounded hover:shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
-                        >
-                            Sign Up
-                        </button>
-
-                        <div className="text-center mt-6">
-                            <a href="/login" className="text-sm text-[#999077] hover:text-[#FFD700] transition-colors border-b border-transparent hover:border-[#FFD700] py-0.5">
-                                Already have an account? Sign in
+                            <a href="/api/auth/google" className="block w-full text-center border-2 border-black text-black text-[12px] leading-none tracking-[0.15em] font-bold uppercase py-4 hover:bg-gray-50 transition-colors duration-200">
+                                CONTINUE WITH GOOGLE
                             </a>
+
+                            <p className="text-center text-sm text-gray-600 mt-2">
+                                ALREADY ENROLLED? <Link to="/login" className="font-bold text-black underline underline-offset-4">SIGN IN</Link>
+                            </p>
                         </div>
                     </form>
+
+                    <div className="mt-8 pt-4 border-t border-black/10 hidden lg:block w-[90%]">
+                        <p className="text-[10px] leading-none tracking-[0.1em] font-bold text-black/40 uppercase text-center">
+                            A reflection of self translated into design.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </section>
+
+            {/* Image Section (Now on the Left) */}
+            <section className="hidden md:flex md:w-[40%] lg:w-[45%] relative bg-black flex-col justify-center overflow-hidden">
+                <img
+                    alt="Streetwear model"
+                    className="absolute inset-0 w-full h-full object-contain grayscale contrast-125 opacity-90 p-2"
+                    src="../../../../public/_.jpeg"
+                />
+                <div className="absolute inset-0 flex flex-col justify-between p-12 pointer-events-none">
+                    <div className="flex justify-start">
+                        <span className="bg-black text-white px-3 py-2 text-[10px] leading-none tracking-[0.15em] font-bold uppercase border border-white/20">DROP 04 // SEASON 24</span>
+                    </div>
+                    <div className="space-y-4">
+                        <div className="text-white text-5xl lg:text-6xl font-playfair tracking-wide mix-blend-difference">
+                            <span className="italic">रaaगा</span> Luxe
+                        </div>
+                        <div className="h-[2px] bg-white w-16"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
     );
 };
 
