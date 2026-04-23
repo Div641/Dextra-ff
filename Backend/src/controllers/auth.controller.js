@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken"
 import { config } from "../config/config.js";
 
 
-async function sendTokenResponse(user, res) {
+async function sendTokenResponse(user, res,message) {
 
     const token = jwt.sign({
         id: user._id,
@@ -48,7 +48,7 @@ export const register = async (req, res) => {
             contact,
             password,
             fullname,
-            role : isSeller ? "seller" : "buyer "
+            role : isSeller ? "seller" : "buyer"
         })
 
         await sendTokenResponse(user, res,"User registered successfully"); //token generate kr k cookies mai save krega ye function
@@ -81,3 +81,8 @@ export const login = async (req, res) => {
 
 }
 
+export const googleCallback = async (req, res) => {
+    console.log(req.user)
+
+    res.redirect("http://localhost:5173/")
+}

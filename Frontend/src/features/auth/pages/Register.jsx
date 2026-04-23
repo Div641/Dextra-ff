@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from "../hook/useAuth"
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 const Register = () => {
 
@@ -42,7 +42,7 @@ const Register = () => {
             <div className="hidden lg:flex lg:w-1/2 relative bg-[#131313] items-center justify-center overflow-hidden border-r border-[#1c1b1b]">
                 <img
                     src="../../../../public/editorial.png"
-                    alt="Snitch Fashion Editorial"
+                    alt="DexFashion Editorial"
                     className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity hover:scale-105 transition-transform duration-[20s] ease-out"
                 />
 
@@ -51,7 +51,7 @@ const Register = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0e0e0e]/50 via-transparent to-[#0e0e0e] opacity-90"></div>
 
                 <div className="relative z-10 p-16 flex flex-col h-full justify-between w-full max-w-2xl">
-                    <h2 className="text-[#FFD700] text-xl font-bold tracking-widest uppercase">Dextra.</h2>
+                    <h2 className="text-[#FFD700] text-xl font-bold tracking-widest uppercase">DexFashion.</h2>
 
                     <div className="mt-auto">
                         <p className="text-5xl lg:text-6xl font-bold tracking-tighter leading-[1.1] text-white mb-6">
@@ -67,7 +67,7 @@ const Register = () => {
 
             {/* Split Screen - Right Form Section */}
             <div className="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-10 lg:p-12 h-screen overflow-hidden bg-[#0e0e0e]">
-                <div className="w-full max-w-md max-h-[90vh] overflow-y-auto bg-[#131313] lg:bg-transparent p-8 md:p-10 lg:p-6 rounded-2xl lg:rounded-none shadow-[0_24px_48px_-12px_rgba(0,0,0,0.5)] lg:shadow-none">
+                <div className="w-full max-w-md max-h-[80vh] overflow-y-auto bg-[#131313] lg:bg-transparent p-8 md:p-10 lg:p-6 rounded-2xl lg:rounded-none shadow-[0_24px_48px_-12px_rgba(0,0,0,0.5)] lg:shadow-none">
                     <div className="mb-8">
                         <h2 className="text-sm uppercase tracking-widest text-[#FFD700] font-medium mb-3">Welcome to Dextra</h2>
                         <h1 className="text-4xl md:text-5xl font-bold tracking-tighter text-white">Elevate Your Style</h1>
@@ -147,6 +147,10 @@ const Register = () => {
                             </div>
                             <label htmlFor="isSeller" className="text-sm text-[#e5e2e1] group-hover:text-[#FFD700] cursor-pointer select-none transition-colors duration-300">Register as Seller</label>
                         </div>
+
+                        <a href="/api/auth/google" className="mt-4 block text-center text-[#999077] hover:text-[#FFD700] transition-colors duration-300">
+                            Continue with Google
+                        </a>
 
                         {/* Submit Button */}
                         <button
