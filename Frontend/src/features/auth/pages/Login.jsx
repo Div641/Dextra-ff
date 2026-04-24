@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useAuth } from "../hook/useAuth";
 import { useNavigate, Link } from "react-router";
+import ContinueWithGoogle from '../../../components/ContinueWithGoogle';
 
 const Watermarks = () => (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-[0.04] text-black">
+    <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-[0.06] text-black">
         {/* Top Left Artistic Lotus */}
         <svg className="absolute -top-32 -left-32 w-[600px] h-[600px] -rotate-12" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.2">
             <path d="M50 95 C 45 70 45 35 50 15 C 55 35 55 70 50 95 Z" fill="currentColor" fillOpacity="0.4"/>
@@ -194,6 +195,8 @@ const Login = () => {
                             >
                                 SIGN IN
                             </button>
+
+                            <ContinueWithGoogle />
 
                             <p className="text-center text-sm text-gray-600 mt-4">
                                 NO ACCOUNT YET? <Link to="/register" className="font-bold text-black underline underline-offset-4">SIGN UP</Link>
